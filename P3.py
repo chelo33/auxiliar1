@@ -64,7 +64,7 @@ for i in N:
 #### Node can only be assigned to at least 1 safe point and maximum 2 safe ponts ####
 for i in N:
     m.addConstr(quicksum(y[i,j] for j in idsecure) >= 1)
-    m.addConstr(quicksum(y[i,j] for j in idsecure) >= -2)
+    m.addConstr(quicksum(y[i,j] for j in idsecure) <= 2)
     
 #### Outwards flow has to be equal to population in node ####
 for i in N:
